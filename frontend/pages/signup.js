@@ -4,8 +4,12 @@ import SignupComp from '../components/auth/SignupComp';
 const Signup = () => {
     return (
         <Layout>
-            <h2>Signup Page</h2>
-            <SignupComp />
+            <div className="app-mainwrapper left fwidth">
+                <div className="app-inWrapper">
+                    <h2>Create an account</h2>
+                    <SignupComp />
+                </div>
+            </div>
         </Layout>
     )
 }

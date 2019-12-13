@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Router from 'next/router';
-import { signin, authenticate } from '../../actions/auth';
+import { signin, authenticate, isAuth } from '../../actions/auth';
 
 const SigninComp = () => {
 
@@ -17,7 +17,11 @@ const SigninComp = () => {
                 setValues({ ...values, error: data.error,loading: false });
             } else {
                 authenticate(data, () => {
-                    Router.push(`/`);
+                    if(isAuth() && isAuth().role === 1){
+                        Router.push(`/admin`);
+                    } else {
+                        Router.push(`/user`);
+                    }
                 });
             };
         });
@@ -37,14 +41,14 @@ const SigninComp = () => {
             <form onSubmit={handleSubmit} className="left fwidth">
                 <div className="app-frmCover left fwidth">
                     <div className="app-field left fwidth">
-                        <span>email</span>
+                        <span>Email</span>
                         <input type="email" value={email} onChange={handleChange('email')} />
                     </div>
                     <div className="app-field left fwidth">
-                        <span>password</span>
+                        <span>Password</span>
                         <input type="password" value={password} onChange={handleChange('password')} />
                     </div>
-                    <div className="app-fieldBtn">
+                    <div className="app-fieldBtn left fwidth">
                         <button className="app-btns">Signin</button>
                     </div>
                 </div>

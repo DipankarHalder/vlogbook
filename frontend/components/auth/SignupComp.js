@@ -31,21 +31,21 @@ const SignupComp = () => {
 
     const signupForm = () => {
         return (
-            <form onSubmit={handleSubmit}>
-                <div className="app-frmCover">
-                    <div className="app-field">
+            <form onSubmit={handleSubmit} className="left fwidth">
+                <div className="app-frmCover left fwidth">
+                    <div className="app-field left fwidth">
                         <span>Name</span>
                         <input type="text" value={name} onChange={handleChange('name')} />
                     </div>
-                    <div className="app-field">
+                    <div className="app-field left fwidth">
                         <span>email</span>
                         <input type="email" value={email} onChange={handleChange('email')} />
                     </div>
-                    <div className="app-field">
+                    <div className="app-field left fwidth">
                         <span>password</span>
                         <input type="password" value={password} onChange={handleChange('password')} />
                     </div>
-                    <div className="app-fieldBtn">
+                    <div className="app-fieldBtn left fwidth">
                         <button className="app-btns">Signup</button>
                     </div>
                 </div>

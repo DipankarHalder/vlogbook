@@ -8,6 +8,9 @@ require('dotenv').config();
 
 // import routes
 const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/user');
+const categoryRoutes = require('./routes/category');
+const tagRoutes = require('./routes/tag');
 
 // create app
 const app = express();
@@ -43,7 +46,10 @@ if(process.env.NODE_EVN === "development") {
 }
 
 // use routes
-app.use('/api', authRoutes)
+app.use('/api', authRoutes);
+app.use('/api', userRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', tagRoutes);
 
 // check api url exist or not
 app.use((req, res, next) => {

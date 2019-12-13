@@ -6,7 +6,7 @@ const Signin = () => {
         <Layout>
             <div className="app-mainwrapper left fwidth">
                 <div className="app-inWrapper">
-                    <h2>Login</h2>
+                    <h2>Login to continue</h2>
                     <SigninComp />
                 </div>
             </div>
