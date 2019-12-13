@@ -3,7 +3,7 @@
 ### Frontend -
 
 &nbsp;
-_Used Tools and Libraries :_
+_*Used Tools and Libraries :*_
 * Html5
 * CSS3
 * Next.js with React.js
@@ -12,7 +12,7 @@ _Used Tools and Libraries :_
 * isomorphic-fetch
 
 &nbsp;
-_Feature :_
+_*Feature :*_
 * Registration / Login / Logout / Forgot Password
 * Protected routes
 * After login user can timeline page
@@ -22,7 +22,7 @@ _Feature :_
 ### Backend -
   
 &nbsp;
-_Used Packegs and Libraries :_
+_*Used Packegs and Libraries :*_
 * Node.js
 * Express.js
 * Mongoose ODM (MongoDB)
