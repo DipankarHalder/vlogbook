@@ -1,0 +1,65 @@
+@font-face {font-family: "Amazon Ember"; font-weight: 300; src: url("./font/lt.woff2") format("woff2"), url("./font/lt.woff") format("woff");}
+@font-face {font-family: "Amazon Ember"; font-weight: 400; src: url("./font/rg.woff2") format("woff2"), url("./font/rg.woff") format("woff");}
+@font-face {font-family: "Amazon Ember"; font-weight: 700; src: url("./font/bd.woff2") format("woff2"), url("./font/bd.woff") format("woff");}
+@font-face {font-family: "great_vibesregular"; font-weight: normal; src: url('./font/gr.woff2') format('woff2'), url('./font/gr.woff') format('woff');}
+:root {
+    --logo: "great_vibesregular";
+    --font: "Amazon Ember";
+    --flight: 300;
+    --frglr: 400;
+    --fbold: 700;
+
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #7a7a7a;
+
+    --themeBgColor: #e3e6ef;
+    --themeFont: #111111;
+    --themeLink: #1276a8;
+    --themeHoverLink: #065177;
+
+    --themeBlue: #007dbb;
+    --themeDarkBlue: #006396;
+
+    --themeShadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    --themeHoverShadow: 0 20px 60px 0 rgba(0, 0, 0, 0.2);
+}
+html, body { margin: 0px; padding: 0px; font-weight: var(--frglr); font-size: 1rem; font-family: var(--font); }
+body{background: var(--themeBgColor);}
+body { text-align: left; background: var(--themeBgColor); }
+h1, h2, h3, h4, h5, h6, p, ul, ol, li { margin: 0px; padding: 0px; }
+ul, ol, li{ list-style: none; padding-left: 0px; }
+main { display: block; }
+abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; }
+a, img{ outline: 0; border: 0px solid transparent; text-decoration: none; }
+a:focus, a:active, img:focus, img:active{ outline: 0; }
+b, strong { font-weight: bolder; }
+code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+button, input, optgroup, select, textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; padding: 0px; border: 0px solid transparent; }
+button:focus, button:active, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active{ outline: 0; }
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; }
+fieldset { padding: 0.35em 0.75em 0.625em; }
+
+.left{float: left;}
+.right{float: right;}
+.fwidth{width: 100%;}
+
+.app-container{margin: 0 auto; max-width: 1200px; padding: 0px 10px; box-sizing: border-box; -webkit-box-sizing: border-box;}
+
+.app-header{padding: 10px 0px; background: var(--themeBlue);}
+.app-logo{width: auto; font-size: 40px; font-family: var(--logo); color: var(--white); line-height: 40px;}
+.app-navigation{width: auto;margin-top: 10px;}
+.app-navigation ul li{float: left; width: auto; margin-left: 36px;}
+.app-navigation ul li a{float: left; font-size: 14px; text-transform: uppercase; color: var(--white);}
+
+.app-mainwrapper{display: flex; display: -webkit-flex; flex-direction: column; -webkit-flex-direction: column; justify-content: center; -webkit-justify-content: center; align-items: center; -webkit-align-items: center;}
+.app-inWrapper{width: 400px; margin-top: 6rem;}
+.app-field{margin-bottom: 16px;}
