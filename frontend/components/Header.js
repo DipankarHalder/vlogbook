@@ -1,8 +1,13 @@
 import Router from 'next/router';
 import Link from 'next/link';
+import nProgress from 'nprogress';
 
 import { APP_NAME } from '../config';
 import { signout, isAuth } from '../actions/auth';
+
+Router.onRouteChangeStart = url => nProgress.start();
+Router.onRouteChangeComplete = url => nProgress.done();
+Router.onRouteChangeError = url => nProgress.done();
 
 const Header = () => {
     return (
