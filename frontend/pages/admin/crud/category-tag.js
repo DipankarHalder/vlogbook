@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import Admin from '../../../components/auth/Admin';
+import Category from '../../../components/crud/Category';
 
 const CategoryTag = () => {
     return (
@@ -9,10 +10,11 @@ const CategoryTag = () => {
                 <h2 className="left fwidth">Manage Categories & Tags</h2>
                 <div className="left fwidth">
                     <div className="sidebar left">
-                       <p>Categories</p>
+                        <Category />
                     </div>
                     <div className="main left">
                         <p>Tags</p>
+                        <Category />
                     </div>
                 </div>
             </Admin>

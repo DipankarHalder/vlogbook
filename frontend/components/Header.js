@@ -26,15 +26,14 @@ const Header = () => {
                                 </React.Fragment>
                             )}
                             {isAuth() && isAuth().role === 0 && (
-                                <li><Link href="/user"><a>{`${isAuth().name}'s dashboard`}</a></Link></li>
+                                <li><Link href="/user"><a>{`${isAuth().name}'s Dashboard`}</a></Link></li>
                             )}
                             {isAuth() && isAuth().role === 1 && (
-                                <li><Link href="/admin"><a>{`${isAuth().name}'s dashboard`}</a></Link></li>
+                                <li><Link href="/admin"><a>{`${isAuth().name}'s Dashboard`}</a></Link></li>
                             )}
                             {isAuth() && (
                                 <li><a onClick={() => signout(() => Router.replace('/signin'))}>Signout</a></li>
                             )}
-                            
                         </ul>
                     </div>
                 </header>

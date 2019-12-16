@@ -69,7 +69,7 @@ fieldset { padding: 0.35em 0.75em 0.625em; }
 .app-logoStyle{color: var(--white);}
 .app-navigation{width: auto;margin-top: 10px;}
 .app-navigation ul li{float: left; width: auto; margin-left: 36px;}
-.app-navigation ul li a{float: left; font-size: 14px; text-transform: uppercase; color: var(--white); cursor: pointer;}
+.app-navigation ul li a{float: left; font-size: 15px; color: var(--white); cursor: pointer;}
 
 .app-mainwrapper{display: flex; display: -webkit-flex; flex-direction: column; -webkit-flex-direction: column; justify-content: center; -webkit-justify-content: center; align-items: center; -webkit-align-items: center;}
 .app-inWrapper{width: 400px; margin-top: 6rem;}
