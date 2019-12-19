@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import Router from 'next/router';
+
+import AdminSidebar from '../AdminSidebar';
 import { isAuth } from '../../actions/auth';
 
 const Admin = ({children}) => {
@@ -13,7 +15,10 @@ const Admin = ({children}) => {
 
     return (
         <React.Fragment>
-            {children}
+            <AdminSidebar />
+            <div className="left mainAdminWrapper">
+                {children}
+            </div>
         </React.Fragment>
     )
 }

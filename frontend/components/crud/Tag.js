@@ -1,54 +1,54 @@
 import { useState, useEffect } from 'react';
 import { getCookie } from '../../actions/auth';
-import { create, getCategories, removeCategory } from '../../actions/category';
+import { create, getTags, removeTag } from '../../actions/tag';
 
-const Category = () => {
+const Tag = () => {
     const [values, setValues] = useState({
         name: '',
-        categories: [],
+        tags: [],
         error: false,
         success: false,
         removed: false,
         reload: false
     });
 
-    const {name, categories, error, success, removed, reload } = values;
+    const {name, tags, error, success, removed, reload } = values;
     const token = getCookie('token');
 
     useEffect(() => {
-        loadCategories();
+        loadTags();
     }, [reload]);
 
-    const loadCategories = () => {
-        getCategories().then(data => {
+    const loadTags = () => {
+        getTags().then(data => {
             if(data.error){
                 console.log(data.error);
             } else {
-                setValues({...values, categories: data})
+                setValues({...values, tags: data})
             }
         })
     };
 
-    const showCategories = () => {
-        return categories.map((c, i) => {
+    const showTags = () => {
+        return tags.map((t, i) => {
             return (
                 <span key={i} className="adminListCategory">
-                    {c.name}
-                    <button onClick={() => deleteConfirm(c.slug)} title="Double click to Delete"></button>
+                    {t.name}
+                    <button onClick={() => deleteConfirm(t.slug)} title="Double click to Delete" key={i}></button>
                 </span>
             );
         });
     };
 
     const deleteConfirm = slug => {
-        let answer = window.confirm('Are you sure you want to delete the category?');
+        let answer = window.confirm('Are you sure you want to delete the tag?');
         if(answer){
-            deleteCategory(slug);
+            deleteTag(slug);
         }
     };
 
-    const deleteCategory = slug => {
-        removeCategory(slug, token).then(data => {
+    const deleteTag = slug => {
+        removeTag(slug, token).then(data => {
             if(data.error){
                 console.log(data.error);
             } else {
@@ -74,17 +74,17 @@ const Category = () => {
 
     const showSuccess = () => { 
         if(success) {
-            return <p>Category is created successfully <span onClick={mouseMoveHandler}>X</span></p> 
+            return <p>Tag is created successfully <span onClick={mouseMoveHandler}>X</span></p> 
         }
     }
     const showError = () => { 
         if(error) {
-            return <p>Category already exist <span onClick={mouseMoveHandler}>X</span></p> 
+            return <p>Tag already exist <span onClick={mouseMoveHandler}>X</span></p> 
         }
     }
     const showRemoved = () => { 
         if(removed) {
-            return <p>Category is removed successfully <span onClick={mouseMoveHandler}>X</span></p> 
+            return <p>Tag is removed successfully <span onClick={mouseMoveHandler}>X</span></p> 
         }
     }
 
@@ -92,14 +92,14 @@ const Category = () => {
         setValues({...values, error: false, success: false, removed: ''})
     }
 
-    const newCategoryFrom = () => (
+    const newTagFrom = () => (
         <form onSubmit={clickSubmit}>
             <div className="left admin-app-field">
-                <span>Type your category here...</span>
+                <span>Write your tag here...</span>
                 <input type="text" onChange={handleChange} value={name} requied="true" />
             </div>
             <div className="left admin-app-field-btn">
-                <button type="submit" className="btn">Add Category</button>
+                <button type="submit" className="btn">Add Tag</button>
             </div>
         </form>
     );
@@ -112,14 +112,14 @@ const Category = () => {
             
             <div className="left fwidth">
                 <div className="left fwidth adminFrm">
-                    {newCategoryFrom()}
+                    {newTagFrom()}
                 </div>
                 <div className="left fwidth adminCategories">
-                    {showCategories()}
+                    {showTags()}
                 </div>
             </div>
         </React.Fragment>
     );
 };
 
-export default Category;
+export default Tag;

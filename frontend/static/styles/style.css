@@ -64,7 +64,7 @@ fieldset { padding: 0.35em 0.75em 0.625em; }
 .nprogress-custom-parent {overflow: hidden; position: relative;}
 .nprogress-custom-parent #nprogress .spinner,.nprogress-custom-parent #nprogress .bar {position: absolute;}
 
-.app-header{padding: 10px 0px; background: var(--themeBlue);}
+.app-header{padding: 10px 30px; background: var(--themeBlue); box-sizing: border-box; -webkit-box-sizing: border-box;}
 .app-logo{width: auto; font-size: 40px; font-family: var(--logo); line-height: 40px;}
 .app-logoStyle{color: var(--white);}
 .app-navigation{width: auto;margin-top: 10px;}
@@ -80,3 +80,26 @@ fieldset { padding: 0.35em 0.75em 0.625em; }
 .app-field input{float: left; width: 100%; border-radius: 3px; height: 38px; line-height: 38px; font-size: 14px; border: 1px solid #eff0f7; padding: 0em 0.8em; box-sizing: border-box; -webkit-box-sizing: border-box;}
 .app-fieldBtn{margin-top: 20px;}
 .app-fieldBtn .app-btns{width: 100%; float: left; height: 38px;font-size: 16px; color: var(--white); border: 0px solid transparent; border-radius: 3px; padding: 0em 1em; cursor: pointer; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-appearance: none; background: var(--themeBlue); transition: 500ms; -webkit-transition: 500ms;}
+
+.mainAdminWrapper{padding: 40px 50px; width: calc(100% - 15rem); background: var(--white); min-height: calc(100vh - 60px); box-shadow: var(--themeShadow); box-sizing: border-box; -webkit-box-sizing: border-box;}
+.adminheading{padding: 0px 0px 10px; border-bottom: 1px solid var(--themeBgColor); font-size: 18px;}
+.sidebar{width: 15rem; z-index: 2; position: relative; margin-top: 20px;}
+.sidebar ul, .sidebar li{ float: left; width: 100%;}
+.sidebar li{margin-bottom: 6px;}
+.sidebar li a{float: left; padding: 16px 24px; color: var(--gray); width: calc(100% - 20px); box-sizing: border-box; -webkit-box-sizing: border-box; background: var(--white); margin-left: 20px; border-radius: 40px 0px 0px 40px;}
+.adminFrm{margin-top: 30px; margin-bottom: 30px;}
+.adminFrm form{float: left; width: auto;}
+.admin-app-field{width: auto;}
+.admin-app-field span{float: left; width: auto; font-size: 13px; color: var(--gray); margin-bottom: 4px; clear: both;}
+.admin-app-field input[type="text"]{float: left; width: 24rem; padding: 10px 12px; height: 38px; line-height: 38px; margin-right: 10px; box-sizing: border-box; -webkit-box-sizing: border-box; border: 1px solid var(--themeBgColor); border-radius: 3px; clear: both; font-size: 14px;}
+.admin-app-field-btn{margin-top: 20px;}
+.admin-app-field-btn button{float: left; width: auto; padding: 10px 30px; border-radius: 3px; height: 38px; background: var(--themeBlue); color: var(--white);}
+.adminCategories{padding: 30px; box-sizing: border-box; -webkit-box-sizing: border-box; background: #f7f7f7;}
+.adminListCategory{float: left; width: auto; padding: 8px 20px; font-size: 14px; border-radius: 40px; border: 1px solid var(--themeBlue); margin-right: 16px; text-transform: capitalize;}
+.adminListCategory button{float: right; width: 16px; height: 16px; margin-left: 10px; margin-top: 2px; background: transparent; position: relative;}
+.adminListCategory button:before, .adminListCategory button:after{content: ''; position: absolute; top: 7px; left: 0px; width: 16px; height: 2px; background: var(--themeBlue);}
+.adminListCategory button:before{transform: rotate(-45deg);-webkit-transform: rotate(-45deg);}
+.adminListCategory button:after{transform: rotate(45deg);-webkit-transform: rotate(45deg);}
+
+
+
