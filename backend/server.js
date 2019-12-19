@@ -11,6 +11,7 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const categoryRoutes = require('./routes/category');
 const tagRoutes = require('./routes/tag');
+const blogRoutes = require('./routes/blog');
 
 // create app
 const app = express();
@@ -50,6 +51,7 @@ app.use('/api', authRoutes);
 app.use('/api', userRoutes);
 app.use('/api', categoryRoutes);
 app.use('/api', tagRoutes);
+app.use('/api', blogRoutes);
 
 // check api url exist or not
 app.use((req, res, next) => {
